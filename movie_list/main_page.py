@@ -40,8 +40,8 @@ st.set_page_config("Movie List",layout="wide")
 
 col1, col2 =st.columns([15,5]) 
 
-movies = get_movies(r"C:\Users\Sertac\Documents\GitHub\Movie-Recommendation-For-Ms.-Kurt\movie_list\movies.txt")
-watched_movies = get_movies(r"C:\Users\Sertac\Documents\GitHub\Movie-Recommendation-For-Ms.-Kurt\movie_list\watched_movies.txt")
+movies = get_movies("movie_list/movies.txt")
+watched_movies = get_movies("movie_list/watched_movies.txt")
 
 with col1:
 
@@ -54,14 +54,14 @@ with col1:
             number = random.randrange(4,7)
             time.sleep(0.1)
             autoplay_audio(f"C:/Users/Sertac/Documents/GitHub/Movie-Recommendation-For-Ms.-Kurt/movie_list/sound_effects/{number}.mp3")
-            time.sleep(3.9)
+            time.sleep(4)
             
             movies.pop(index)
-            write_movies(movies,r"C:\Users\Sertac\Documents\GitHub\Movie-Recommendation-For-Ms.-Kurt\movie_list\movies.txt")
+            write_movies(movies,"movie_list/movies.txt")
             del st.session_state[movie]
 
             watched_movies.append(movie)
-            write_movies(watched_movies,r"C:\Users\Sertac\Documents\GitHub\Movie-Recommendation-For-Ms.-Kurt\movie_list\watched_movies.txt")
+            write_movies(watched_movies,"movie_list/watched_movies.txt")
             st.rerun()
     
             
