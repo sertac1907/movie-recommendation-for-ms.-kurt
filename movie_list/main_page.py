@@ -54,7 +54,7 @@ with col1:
             number = random.randrange(4,7)
             time.sleep(0.1)
             autoplay_audio(f"movie_list/sound_effects/{number}.mp3")
-            time.sleep(4)
+            time.sleep(4.15)
             
             movies.pop(index)
             write_movies(movies,"movie_list/movies.txt")
