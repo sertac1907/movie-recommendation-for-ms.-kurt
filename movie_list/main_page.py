@@ -53,7 +53,7 @@ with col1:
         if check:
             number = random.randrange(4,7)
             time.sleep(0.1)
-            autoplay_audio(f"C:/Users/Sertac/Documents/GitHub/Movie-Recommendation-For-Ms.-Kurt/movie_list/sound_effects/{number}.mp3")
+            autoplay_audio(f"movie_list/sound_effects/{number}.mp3")
             time.sleep(4)
             
             movies.pop(index)
