@@ -19,9 +19,8 @@ st.set_page_config("Movie List",layout="wide")
 
 col1, col2 =st.columns([15,5]) 
 
-movies = get_movies("PyhtonMegaCourse/Streamlit/movie_list/movies.txt")
-watched_movies = get_movies("PyhtonMegaCourse/Streamlit/movie_list/watched_movies.txt")
-
+movies = get_movies("C:\Users\Sertac\Documents\GitHub\Movie-Recommendation-For-Ms.-Kurt\movie_list\movies.txt")
+watched_movies = get_movies("C:\Users\Sertac\Documents\GitHub\Movie-Recommendation-For-Ms.-Kurt\movie_list\watched_movies.txt")
 with col1:
 
     st.title("Movies That Kandemir Suggested")
@@ -32,11 +31,11 @@ with col1:
         if check:
             
             movies.pop(index)
-            write_movies(movies,"PyhtonMegaCourse/Streamlit/movie_list/movies.txt")
+            write_movies(movies,"C:\Users\Sertac\Documents\GitHub\Movie-Recommendation-For-Ms.-Kurt\movie_list\movies.txt")
             del st.session_state[movie]
 
             watched_movies.append(movie)
-            write_movies(watched_movies,"PyhtonMegaCourse/Streamlit/movie_list/watched_movies.txt")
+            write_movies(watched_movies,"C:\Users\Sertac\Documents\GitHub\Movie-Recommendation-For-Ms.-Kurt\movie_list\watched_movies.txt")
             st.rerun()
     
             

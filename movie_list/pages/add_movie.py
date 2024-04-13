@@ -1,12 +1,12 @@
 import streamlit as st
 
 def get_movies():
-    with open("PyhtonMegaCourse/Streamlit/movie_list/movies.txt","r") as file:
+    with open("C:\Users\Sertac\Documents\GitHub\Movie-Recommendation-For-Ms.-Kurt\movie_list\movies.txt","r") as file:
         movies = file.readlines()
     return movies
 
 def write_movies(local_movies):
-    with open("PyhtonMegaCourse/Streamlit/movie_list/movies.txt","w") as file:        
+    with open("C:\Users\Sertac\Documents\GitHub\Movie-Recommendation-For-Ms.-Kurt\movie_list\watched_movies.txt","w") as file:        
         file.writelines(local_movies)
 
 
