@@ -40,8 +40,8 @@ st.set_page_config("Movie List",layout="wide")
 
 col1, col2 =st.columns([15,5]) 
 
-movies = get_movies("movie_list/movies.txt")
-watched_movies = get_movies("movie_list/watched_movies.txt")
+movies = get_movies("./movies.txt")
+watched_movies = get_movies("./watched_movies.txt")
 
 with col1:
 
@@ -53,15 +53,15 @@ with col1:
         if check:
             number = random.randrange(4,7)
             time.sleep(0.1)
-            autoplay_audio(f"movie_list/sound_effects/{number}.mp3")
+            autoplay_audio(f"./sound_effects/{number}.mp3")
             time.sleep(4.15)
             
             movies.pop(index)
-            write_movies(movies,"movie_list/movies.txt")
+            write_movies(movies,"./movies.txt")
             del st.session_state[movie]
 
             watched_movies.append(movie)
-            write_movies(watched_movies,"movie_list/watched_movies.txt")
+            write_movies(watched_movies,"./watched_movies.txt")
             st.rerun()
     
             
