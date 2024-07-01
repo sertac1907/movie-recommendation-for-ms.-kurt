@@ -1,12 +1,12 @@
 import streamlit as st
 
 def get_movies():
-    with open("movie_list/movies.txt","r") as file:
+    with open("./movies.txt","r") as file:
         movies = file.readlines()
     return movies
 
 def write_movies(local_movies):
-    with open("movie_list/movies.txt","w") as file:        
+    with open("./movies.txt","w") as file:        
         file.writelines(local_movies)
 
 
